@@ -29,10 +29,17 @@ $.ajax("/api/burgers/", {
     type: "POST",
     data: newBurger
   }).then(
-    function() {
+    function(data) {
+      console.log(data)
+      if (data) {
       console.log("POST burger");
       // Reload the page to get the updated list
       location.reload();
+    }
+
+    else {
+      alert("Please input a burger name.")
+    }
     }
   );   
 

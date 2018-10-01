@@ -16,6 +16,11 @@ router.get("/", function (req, res) {
 router.post("/api/burgers", function (req, res) {
     console.log(req.body);
     let burgerName = req.body.burger_name;
+
+    if (burgerName === "") {
+
+        return res.json(false);
+    }
     console.log("burgername: " + burgerName)
     burger.insertOne(burgerName, function (result) {
         // Send back the ID of the new quote
