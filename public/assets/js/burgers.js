@@ -18,7 +18,7 @@ $(document).on("click", ".burger-eater", function() {
 })
 
 $("#burger-submit").on("click", function(e) {
-    alert("test")
+
 e.preventDefault();
 
 var newBurger = {

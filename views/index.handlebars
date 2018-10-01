@@ -1,35 +1,11 @@
-{{!-- <h1>Cats!</h1>
-
-<h2>Cats that are not sleepy!</h2> --}}
-
-{{!-- <ul>
-  {{#each cats}}
-  {{#unless sleepy}}
-  {{> cats/cat-block sleep=true}}
-  {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-  {{#if sleepy}}
-  {{> cats/cat-block sleep=false}}
-  {{/if}}
-  {{/each}}
-</ul> --}}
-
 
 <div class="grid-container">
 
   <div class="grid-item picture"><img src="/assets/img/burger.png"></div>
-  <div class="grid-item title">Eat the Burger.</div>
-
-
+  <div class="grid-item title"><h1>Eat the Burger.</h1></div>
 
   <div class="grid-item to-eat">
-
+  <h2>To Be Eaten:</h2>
 
     {{#each burgers}}
     {{#unless devoured}}
@@ -38,18 +14,10 @@
     {{/each}}
 
 
-
-
-
   </div>
 
-
-
-
-
-
-
   <div class="grid-item eaten">
+    <h2>Eaten:</h2>
 
     {{#each burgers}}
     {{#if devoured}}
@@ -72,23 +40,3 @@
   <div class="grid-item info">Enter a burger you want to eat, then click the "Submit" button.</div>
 
 </div>
-
-{{!--
-
-
-<h2>Add a Cat</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
-
-  <button type="submit">Add Cat</button>
-</form> --}}
