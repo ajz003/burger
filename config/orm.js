@@ -29,6 +29,22 @@ var orm = {
             }
             cb(result);
         })
+    },
+    deleteAll: function(tableInput, cb) {
+        let queryString = "DELETE FROM ??;"
+        connection.query(queryString, [tableInput], function(err, result) {
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        })
+        let queryStringer = "ALTER TABLE ?? AUTO_INCREMENT = 1;"
+        connection.query(queryStringer, [tableInput], function(err, result) {
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        })
     }
     
 }

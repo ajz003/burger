@@ -10,3 +10,8 @@ CREATE TABLE burgers
     devoured BOOLEAN DEFAULT FALSE,
 	PRIMARY KEY (id)
 );
+
+DELETE FROM tablename;
+ALTER TABLE burgers AUTO_INCREMENT = 1;
+
+select * from burgers

@@ -1,11 +1,12 @@
-
 <div class="grid-container">
 
   <div class="grid-item picture"><img src="/assets/img/burger.png"></div>
-  <div class="grid-item title"><h1>Eat the Burger.</h1></div>
+  <div class="grid-item title">
+    <h1>Eat the Burger.</h1>
+  </div>
 
   <div class="grid-item to-eat">
-  <h2>To Be Eaten:</h2>
+    <h2>To Be Eaten:</h2>
 
     {{#each burgers}}
     {{#unless devoured}}
@@ -34,9 +35,11 @@
   <div class="grid-item submit">
 
     <input type="submit" value="Submit" id="burger-submit">
-            </form>
+    </form>
 
   </div>
   <div class="grid-item info">Enter a burger you want to eat, then click the "Submit" button.</div>
+  <div class="grid-item delete">    <input type="submit" value="Delete All Burgers" id="delete-all"></div>
+    <div class="grid-item github"><a href="https://github.com/ajz003/burger">GitHub</a></div>
 
 </div>
