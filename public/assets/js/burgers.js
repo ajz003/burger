@@ -4,13 +4,13 @@ $(document).on("click", ".burger-eater", function () {
 
   console.log(id)
 
-  // Send the DELETE request.
+
   $.ajax("/api/burgers/" + id, {
     type: "PUT"
   }).then(
     function () {
       console.log("put burger", id);
-      // Reload the page to get the updated list
+
       location.reload();
     }
   );
@@ -33,7 +33,7 @@ $("#burger-submit").on("click", function (e) {
       console.log(data)
       if (data) {
         console.log("POST burger");
-        // Reload the page to get the updated list
+
         location.reload();
       }
 
